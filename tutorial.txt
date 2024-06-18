@@ -1,0 +1,48 @@
+first create a project in pycharm with custom environment
+pip install django
+pip install djangorestframework
+
+django-admin startproject drinks .
+
+to start server:
+python manage.py runserver
+
+before running it we need to migrate :
+python manage.py migrate
+
+to create superuser (admin):
+python manage.py createsuperuser
+
+email: admin@drinks.com
+username:admin
+password:admin
+
+so to create model for drinks 
+create models.py inside drinks
+
+after creating model 
+
+python manage.py makemigrations drinks
+
+this causes an error so to solve it add your app "drinks" to settings.py Installed_apps
+
+python manage.py migrate
+
+To show our table in admin panel 
+create admin.py
+
+
+Then add 'rest_framework' in installed_apps
+
+then create serializers.py
+
+then create views.py
+
+then change urls.py add views as path
+
+now the read ability is working in CRUD
+
+now we use decorators "apiview"
+
+
+
